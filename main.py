@@ -21,8 +21,6 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 storage = firebase.storage()
 
 # POST
-
-
 @app.post("/upload-file")
 async def upload(file: UploadFile = File(...)):
     filetype = file.filename.split('.').pop()
